@@ -8,7 +8,7 @@ defmodule AdventOfCodeDay01 do
     left_set = MapSet.new(left)
     Stream.filter(right, &MapSet.member?(left_set, &1))
     |> Stream.map(&String.to_integer/1)
-    |> Enum.reduce(fn y, acc -> y + acc end)
+    |> Enum.sum()
   end
 end
 
