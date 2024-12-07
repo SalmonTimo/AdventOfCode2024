@@ -1,19 +1,12 @@
-from collections import Counter, defaultdict
 from itertools import product
 from tqdm import tqdm
-
-
-def recur_combinations(operands, solutions):
-    first_operator, rest = operands[0] 
-    
 
 def main():
     s = ""
     total = 0
-    # with open('sample_input.txt') as f:
     with open('input.txt') as f:
         s = f.read()
-    # grid = [[x for x in line] for line in s.split('\n')]
+
     for line in tqdm(s.split('\n')):
         target, operands = line.split(': ')
         target = int(target)
