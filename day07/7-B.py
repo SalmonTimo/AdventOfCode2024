@@ -14,7 +14,6 @@ def main():
     with open('input.txt') as f:
         s = f.read()
     # grid = [[x for x in line] for line in s.split('\n')]
-    # try brute force pt 1
     for line in tqdm(s.split('\n')):
         target, operands = line.split(': ')
         target = int(target)
@@ -29,10 +28,7 @@ def main():
                     prod *= operand
                 else:
                     prod = int(str(prod) + str(operand))
-            # if target == 292:
-            #     print(target, operands, operator_comb, prod)
             if prod == target:
-                # print("Found prod for target", prod, target, operator_comb, operands)
                 total += target
                 break
 

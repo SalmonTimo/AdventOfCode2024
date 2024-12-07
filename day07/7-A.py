@@ -27,10 +27,7 @@ def main():
                     prod += operand
                 else:
                     prod *= operand
-            # if target == 292:
-            #     print(target, operands, operator_comb, prod)
             if prod == target:
-                # print("Found prod for target", prod, target, operator_comb, operands)
                 total += target
                 break
 
